@@ -1,0 +1,147 @@
+:root {
+    --bg: #f5f7fb;
+    --text: #1f2937;
+    --card: #ffffff;
+    --muted: #6b7280;
+    --accent: #2563eb;
+    --good: #16a34a;
+    --bad: #dc2626;
+    --border: #e5e7eb;
+}
+
+body.dark {
+    --bg: #0f172a;
+    --text: #e2e8f0;
+    --card: #111827;
+    --muted: #94a3b8;
+    --accent: #60a5fa;
+    --good: #4ade80;
+    --bad: #f87171;
+    --border: #1f2937;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.dashboard {
+    max-width: 1000px;
+    margin: 32px auto;
+    padding: 0 16px 24px;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.top-bar h1 {
+    margin: 0;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filters {
+    display: flex;
+    gap: 8px;
+}
+
+.period-btn,
+#themeToggle {
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text);
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.period-btn.active {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+}
+
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+}
+
+.kpi-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px;
+}
+
+.kpi-title {
+    color: var(--muted);
+    margin: 0 0 8px;
+    font-size: 14px;
+}
+
+.kpi-value {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.kpi-change {
+    margin-top: 6px;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.kpi-change.up {
+    color: var(--good);
+}
+
+.kpi-change.down {
+    color: var(--bad);
+}
+
+.chart-card {
+    margin-top: 16px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.chart-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.chart-head h2 {
+    margin: 0;
+}
+
+.chart-head p {
+    margin: 0;
+    color: var(--muted);
+}
+
+#revenueChart {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}

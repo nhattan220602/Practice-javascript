@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <nav class="nav-bar">
-            <img src="images/1583151.webp" alt="image2" class="logo">
+            <img src="assets/images/1583151.webp" alt="Brand logo" class="logo">
             <ul>
                 <li><a href="#">HOME</a></li>
                 <li><a href="#">ABOUT</a></li>
@@ -22,26 +22,29 @@
     <div class="content">
         <div class="left-col">
             <h1>THE <br>REAL</br> SOUND</h1>
+            <p id="songTitle">Ribs</p>
         </div>
         <div class="right-col">
-            <img src="images/video-play-button-icon-for-graphic-design-logo-web-site-social-media-mobile-app-ui-illustration-png.webp" alt="image3" id="icon">
+            <img src="assets/images/play_circle_200dp_000000_FILL0_wght400_GRAD0_opsz48.png" alt="Play or pause" id="icon">
+            <button id="prevButton" title="Previous Song">Prev</button>
             <button id="nextButton" title="Next Song"></button>
         </div>
     </div>
 
     <div class="controls">
+        <div class="seek-control">
+            <label for="seekSlider">Progress</label>
+            <input type="range" id="seekSlider" min="0" max="100" step="1" value="0">
+            <p id="timeLabel">00:00 / 00:00</p>
+        </div>
         <div class="volume-control">
-            <label for="volumeSlider"></label>
+            <label for="volumeSlider">Volume</label>
             <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1">
         </div>
     </div>
 
-    <audio id="mySong">
-        <source src="musics/Ribs.mp3" type="audio/mp3">
-        <source src="musics/The 1975 - About You (Official).mp3" type="audio/mp3">
-        <source src="musics/The 1975 - Happiness (Official Video).mp3" type="audio/mp3">
-        <source src="musics/The 1975 - Robbers.mp3" type="audio/mp3">
-    </audio>
+    <ul id="playlist" class="playlist"></ul>
+    <audio id="mySong"></audio>
     <script src="script.js"></script>
 </body>
 </html>

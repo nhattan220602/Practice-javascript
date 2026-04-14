@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Design</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header class="top-bar">
+            <h1>Product Dashboard</h1>
+            <div class="actions">
+                <div class="filters">
+                    <button class="period-btn active" data-period="7d">7D</button>
+                    <button class="period-btn" data-period="30d">30D</button>
+                    <button class="period-btn" data-period="90d">90D</button>
+                </div>
+                <button id="themeToggle">Toggle Theme</button>
+            </div>
+        </header>
+
+        <section id="kpiCards" class="kpi-grid"></section>
+
+        <section class="chart-card">
+            <div class="chart-head">
+                <h2>Revenue Trend</h2>
+                <p id="periodLabel">Last 7 days</p>
+            </div>
+            <canvas id="revenueChart" width="900" height="240"></canvas>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
