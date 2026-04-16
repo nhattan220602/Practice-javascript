@@ -46,3 +46,6 @@ The project enables users to switch reporting windows (7D, 30D, 90D), inspect KP
 ## Suggested Next Features
 - Add metric comparison vs previous period.
 - Add API integration for real data input.
+
+## Demo
+![Dashboard Demo](assets/Demo/demo.gif)

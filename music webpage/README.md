@@ -48,3 +48,6 @@ The interface supports playlist navigation, progress tracking, keyboard shortcut
 - Add shuffle/repeat modes.
 - Persist last played song and volume in localStorage.
 - Integrate artist metadata API for richer track context.
+
+## Demo
+![Music Webpage Demo](assets/Demo/demo.gif) 
