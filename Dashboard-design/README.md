@@ -3,13 +3,30 @@
 ## Project Overview
 Dashboard-design is an interactive analytics dashboard built to demonstrate front-end problem-solving in data presentation, state handling, and UI personalization.
 
-The project enables users to switch reporting windows (7D, 30D, 90D), inspect KPI updates instantly, and persist UI theme preference across sessions.
+The project enables users to switch reporting windows (7D, 30D, 90D), inspect KPI updates instantly, and persist UI theme preference across sessions. It also features a team section showcasing contributors.
+
 
 ## Tech Stack
 - HTML5
-- CSS3
-- Vanilla JavaScript (ES6)
+- CSS3 (CSS custom properties for full theme support)
+- Vanilla JavaScript (ES6+)
 - Canvas 2D API (for chart rendering)
+- [Lucide Icons](https://lucide.dev/) (via CDN)
+
+## File Structure
+ 
+```
+dashboard-design/
+├── index.html        ← Markup only
+├── styles.css        ← All styles + design tokens
+├── script.js         ← All JS logic
+├── profile.png       ← Team member avatar (Alex Rivera)
+├── podcast.jpg       ← Team member avatar (Maya Chen)
+├── README.md
+└── assets/
+    └── Demo/
+        └── demo.gif
+```
 
 ## Core Functions
 
@@ -42,10 +59,6 @@ The project enables users to switch reporting windows (7D, 30D, 90D), inspect KP
 - Time-based analytics filtering
 - Theme persistence
 - Component-style rendering in plain JavaScript
-
-## Suggested Next Features
-- Add metric comparison vs previous period.
-- Add API integration for real data input.
 
 ## Demo
 ![Dashboard Demo](assets/Demo/demo.gif)

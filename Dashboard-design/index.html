@@ -1,36 +1,88 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard Design</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  </head>
+  <body>
     <div class="dashboard">
-        <header class="top-bar">
-            <h1>Product Dashboard</h1>
-            <div class="actions">
-                <div class="filters">
-                    <button class="period-btn active" data-period="7d">7 Days</button>
-                    <button class="period-btn" data-period="30d">30 Days</button>
-                    <button class="period-btn" data-period="90d">90 Days</button>
-                </div>
-                <button id="themeToggle">Toggle Theme</button>
-            </div>
-        </header>
+      <!-- TOP BAR -->
+      <header class="top-bar">
+        <div class="brand">
+          <div class="brand-icon" aria-hidden="true">
+            <i data-lucide="bar-chart-2"></i>
+          </div>
+          <h1>Product Dashboard</h1>
+        </div>
+        <div class="actions">
+          <div class="filters" role="group" aria-label="Time period">
+            <button class="period-btn active" data-period="7d">7 Days</button>
+            <button class="period-btn" data-period="30d">30 Days</button>
+            <button class="period-btn" data-period="90d">90 Days</button>
+          </div>
+          <button
+            id="themeToggle"
+            type="button"
+            aria-label="Toggle theme"
+            aria-pressed="false"
+          >
+            <span class="theme-icon" aria-hidden="true">
+              <i id="themeIconMoon" data-lucide="moon"></i>
+              <i id="themeIconSun" data-lucide="sun" hidden></i>
+            </span>
+            <span class="theme-label">Theme</span>
+          </button>
+        </div>
+      </header>
 
-        <section id="kpiCards" class="kpi-grid"></section>
+      <!-- KPI CARDS -->
+      <section
+        id="kpiCards"
+        class="kpi-grid"
+        aria-label="Key performance indicators"
+      ></section>
 
-        <section class="chart-card">
-            <div class="chart-head">
-                <h2>Revenue Trend</h2>
-                <p id="periodLabel">Last 7 days</p>
-            </div>
-            <canvas id="revenueChart" width="900" height="240"></canvas>
-        </section>
+      <!-- REVENUE CHART -->
+      <section class="chart-card" aria-label="Revenue trend chart">
+        <div class="chart-head">
+          <h2>Revenue Trend</h2>
+          <p id="periodLabel">Last 7 days</p>
+        </div>
+        <canvas
+          id="revenueChart"
+          role="img"
+          aria-label="Revenue bar chart"
+        ></canvas>
+      </section>
+
+      <!-- TEAM SECTION -->
+      <p class="section-label">Meet the team</p>
+      <div class="team-grid">
+        <div class="team-card">
+          <img
+            class="team-avatar"
+            src="assets/images/profile.png"
+            alt="Alex Rivera portrait"
+          />
+          <div class="team-info">
+            <p class="team-name">Alex Rivera</p>
+            <p class="team-role">Lead Analyst &amp; Host</p>
+            <span class="team-badge">Product</span>
+          </div>
+        </div>
+        <div class="team-card">
+          <img class="team-avatar" src="assets/images/podcast.jpg" alt="Maya Chen portrait" />
+          <div class="team-info">
+            <p class="team-name">Maya Chen</p>
+            <p class="team-role">Podcast Host &amp; Strategist</p>
+            <span class="team-badge">Growth</span>
+          </div>
+        </div>
+      </div>
     </div>
-
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
